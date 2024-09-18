@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <h2>Gerenciador de Tarefas</h2>
+    <ul class="list-group">
+      <li *ngFor="let tarefa of tarefas"
+          class="list-group-item d-flex justify-content-between align-items-center"
+          [ngClass]="{'completed': tarefa.concluida}">
+        {{ tarefa.descricao }}
+        <button class="btn btn-primary btn-sm" (click)="alternarConclusao(tarefa)">
+          {{ tarefa.concluida ? 'Desmarcar' : 'Concluir' }}
+        </button>
+      </li>
+    </ul>
+  </div>
+  
